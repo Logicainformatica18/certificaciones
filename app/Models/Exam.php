@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Exam extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'alternative1','alternative2','alternative3','alternative4', 'image1','image2',
+        'image3','image4','question_image','answer','detail','ask','certification_id' ,'file'];
         public function certification()
     {
 

@@ -215,12 +215,16 @@ function generateCertication(image_src, student, canvas_id, qr_url, id, cert,tex
            // student = student.toUpperCase();
         let x = canvas1.width / 2  ;
 
-     ctx.fillText(student, x-50, 215);
+     ctx.fillText(student, x, 215);
      
  ctx.font = "bold 20px Arial";
      ctx.fillStyle = "black";
      
-     
+     if (hour <=9) {
+        hour= "0" + hour;
+     }
+
+
      ctx.fillText(hour, x-35, 360);
      
  ctx.font = "bold 30px Arial";
@@ -316,11 +320,11 @@ let = orientacion_anio=x;
 
 
 
-    ctx.fillText( mesCorto+" "+dia + "  "  , x -30, 325);
+    ctx.fillText( mesCorto+" "+dia + "  "  , x -50, 327);
     ctx.font = "bold 15px Arial";
-            ctx.fillText(text_th  , orientacion_th +9, 325);
+            ctx.fillText(text_th  , orientacion_th -15, 325);
             ctx.font = "bold 20px Arial";
-     ctx.fillText(", " + anio, orientacion_anio + 55, 325);
+     ctx.fillText(", " + anio, orientacion_anio + 35, 325);
 
  ctx.font = "14px Arial";
  ctx.fillStyle ="black";
