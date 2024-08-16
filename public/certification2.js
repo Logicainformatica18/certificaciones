@@ -358,6 +358,7 @@ let = orientacion_anio=x;
  }
 }
 function certificationSavePhoto(id,code_certification,cert) {
+    
     var formData = new FormData(document.getElementById("certification"));
     formData.append("id", id);
       formData.append("cert",cert);
@@ -377,7 +378,7 @@ function certificationSavePhoto(id,code_certification,cert) {
            contentdiv.innerHTML = response.data;
   //carga pdf- csv - excel
 
-            alert('Actualiza una vez más la página para compartir');
+         //   alert('Actualiza una vez más la página para compartir');
           
         })
         .catch(function(response) {

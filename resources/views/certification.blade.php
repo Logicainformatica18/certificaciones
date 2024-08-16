@@ -245,13 +245,6 @@
                                     PDF</button> --}}
 
 
-                                @role('Coordinación')
-                                    <form id="certification" method="post" action="" enctype="multipart/form-data"
-                                        name="certification">
-                                        {{-- <button class="btn btn-danger"   onclick="certificationSavePhoto();" >Guardar </button>
-                            <input type='hidden' id="img_source" name="photo" > --}}
-                                    </form>
-                                @endrole
 
 
 
