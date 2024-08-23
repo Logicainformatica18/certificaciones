@@ -231,6 +231,9 @@ Route::post('inscriptionStore',[App\Http\Controllers\InscriptionController::clas
  Route::get('logout',[\App\Http\Controllers\Auth\LoginController::class, 'logout']);
 
 
+
+
+
 Route::get('/auth/google', function () {
     return Socialite::driver('google')->redirect();
 });
@@ -268,8 +271,8 @@ Route::get('/auth/callback', function () {
                 // $newUser->current_team_id = $newTeam->id;
                 $newUser->save();
                 //login as the new user
-                Auth::login($newUser);
                 $newUser->assignRole('Estudiante');
+                Auth::login($newUser);
                 // go to the dashboard
                 return redirect('/home');
             }
